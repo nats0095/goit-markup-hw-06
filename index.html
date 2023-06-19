@@ -445,32 +445,32 @@
       <section class="clients section">
         <h2 class="caption">Nasi klienci</h2>
         <ul class="clients-list list">
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo1" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo1"></use>
             </svg>
           </li>
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo2" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo2"></use>
             </svg>
           </li>
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo3" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo3"></use>
             </svg>
           </li>
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo4" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo4"></use>
             </svg>
           </li>
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo5" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo5"></use>
             </svg>
           </li>
-          <li class="clients-item">
+          <li class="clients-item" tabindex="0">
             <svg class="clients-icon icon-logo6" width="106" height="60,04">
               <use xlink:href="images/icons.svg#icon-logo6"></use>
             </svg>
@@ -505,28 +505,47 @@
         <div class="join-main">
           <p class="address-join">Dołącz do nas</p>
           <ul class="address-contact list">
-            <li class="address-join-item">
+            <li class="address-join-item" tabindex="0">
               <svg class="address-icon icon-instagram" width="20" height="20">
                 <use xlink:href="images/icons.svg#icon-instagram"></use>
               </svg>
             </li>
-            <li class="address-join-item">
+            <li class="address-join-item" tabindex="0">
               <svg class="address-icon icon-twitter" width="20" height="20">
                 <use xlink:href="images/icons.svg#icon-twitter"></use>
               </svg>
             </li>
-            <li class="address-join-item">
+            <li class="address-join-item" tabindex="0">
               <svg class="address-icon icon-facebook" width="20" height="20">
                 <use xlink:href="images/icons.svg#icon-facebook"></use>
               </svg>
             </li>
-            <li class="address-join-item">
+            <li class="address-join-item" tabindex="0">
               <svg class="address-icon icon-linkedin" width="20" height="20">
                 <use xlink:href="images/icons.svg#icon-linkedin"></use>
               </svg>
             </li>
           </ul>
         </div>
+        <form name="newsletter-follow" class="newsletter">
+          <label for="newsletter-input" class="address-join"
+            >Zapisz się do newslettera</label
+          >
+          <input
+            type="email"
+            name="newsletter-email"
+            placeholder="E-mail"
+            class="newsletter-email-input"
+            id="newsletter-input"
+            required
+          />
+          <button type="submit" class="newsletter-submit">
+            Zapisz się
+            <svg width="24px" height="24px" class="newsletter-icon">
+              <use href="images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </section>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -534,6 +553,79 @@
         <button type="button" class="modal-close" data-modal-close>
           &times;
         </button>
+        <h3 class="modal-header">Zostaw swoje dane w formularzu poniżej</h3>
+        <div class="order-group" role="group">
+          <form name="personal-info" class="personal-info">
+            <label for="client-name" class="modal-label">Imię </label>
+            <div class="input-svg">
+              <svg class="form-icon icon-person" width="18" height="18">
+                <use xlink:href="images/icons.svg#icon-person"></use>
+              </svg>
+              <input
+                type="text"
+                name="name"
+                id="client-name"
+                class="input-area"
+                required
+              />
+            </div>
+            <label for="client-tel" class="modal-label">Telefon </label>
+            <div class="input-svg">
+              <svg class="form-icon icon-phone" width="18" height="18">
+                <use xlink:href="images/icons.svg#icon-tel2"></use>
+              </svg>
+              <input
+                type="tel"
+                name="client-telephone"
+                id="client-tel"
+                class="input-area"
+                required
+              />
+            </div>
+            <label for="client-email" class="modal-label">Email </label>
+
+            <div class="input-svg">
+              <svg class="form-icon icon-email" width="18" height="18">
+                <use xlink:href="images/icons.svg#icon-email"></use>
+              </svg>
+              <input
+                type="email"
+                name="client-email"
+                id="client-email"
+                class="input-area"
+                required
+              />
+            </div>
+            <label for="client-comment" class="modal-label">Komentarz</label>
+            <textarea
+              class="modal-comment"
+              name="client-comment"
+              id="client-comment"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+            <div class="policy">
+              <label class="policy">
+                <input
+                  type="checkbox"
+                  name="privacy-policy"
+                  class="checkbox-after"
+                  required
+                />
+                <svg width="11px" height="8px" class="checked-icon">
+                  <use href="images/icons.svg#icon-check"></use>
+                </svg>
+              </label>
+            </div>
+            <div class="agreement">
+              Oświadczam iż akceptuję
+
+              <a href="#" class="policy-link">Regulamin</a>
+              i
+              <a href="#" class="policy-link">Politykę Prywatności</a>
+            </div>
+            <button class="button-send-order" type="submit">Wyślij</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
